@@ -18,6 +18,11 @@ const Register = () => {
         alert('Passwords did not match!')
         return 
     }
+
+    if (password1.length < 8) {
+      alert('❌ Password must be at least 8 characters long!');
+      return;
+    }
     
     const userInfo = {name, email, password1, password2}
 
@@ -54,7 +59,7 @@ const Register = () => {
               <input 
                 type="password"
                 name="password1" 
-                placeholder="Enter password 9 digits with strong..."
+                placeholder="Enter password 8 digits with strong..."
                 autoComplete="password1"
                 />
           </div>
